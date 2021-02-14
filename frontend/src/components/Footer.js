@@ -7,7 +7,16 @@ const Footer = () => {
       <Container>
         <Row>
           <Col className="text-center py-3">
-            Copyright &copy; eCommerce Store
+            Copyright &copy; eCommerce Store&nbsp;&ndash;&nbsp;
+            <span>
+              <a
+                href="https://creativeDev.pro"
+                target="_blank"
+                rel="noreferrer"
+              >
+                by CreativeDev
+              </a>
+            </span>
           </Col>
         </Row>
       </Container>
