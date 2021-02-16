@@ -19,7 +19,7 @@ router.get(
 )
 
 /**
- * @desc  Fetch singlr product
+ * @desc  Fetch singular product
  * @route GET /api/products/:id
  * @access Public
  */
