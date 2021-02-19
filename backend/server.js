@@ -5,6 +5,7 @@ import { notFound, errorHandler } from "./middleware/errorMiddleware.js"
 import connectDB from "./config/db.js"
 
 import productRoutes from "./routes/productRoutes.js"
+import userRoutes from "./routes/userRoutes"
 
 // call environment variables
 dotenv.config()
@@ -15,12 +16,17 @@ connectDB()
 // initialize express
 const app = express()
 
+// body parser
+app.use(express.json())
+
 // routes
 app.get("/", (req, res) => {
   res.send("API is running....")
 })
 
 app.use("/api/products", productRoutes)
+app.use("/api/users", userRoutes)
+
 app.use(notFound)
 
 // this middleware: is a CUSTOM ERROR HANDLER
